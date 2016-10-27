@@ -30,6 +30,9 @@ Thermostat.prototype.decreaseTemperature = function () {
   };
 };
 
+Thermostat.prototype.returnMode = function () {
+  return this._powerOn;
+}
 
 Thermostat.prototype.returnTemperature = function () {
   return this._temperature;
