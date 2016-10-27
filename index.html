@@ -1,48 +1,21 @@
 <html>
   <head>
+    <script src="jquery.js"></script>
+    <script type="text/javascript" src="src/Thermostat.js"></script>
+    <script type="text/javascript" src="script.js"></script>
    <title>Thermostat</title>
-    <link rel="stylesheet" href="style.css">
-
-    <script type="text/javascript" src="Thermostat.js"></script>
+   <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
   </head>
   <body>
-    <!-- <header>
-      <img id="logo" src='https://raw.github.com/codebar/planner/master/app/assets/images/logo.png' width='200' />
-    </header> -->
-    <div id="container">
-      <h1>Temperature</h1>
-      <ol id="items">
-        <!-- Items will be added here -->
-      </ol>
-      <span class="total"></span>
-      <br/>
-      <input type="text" id="item"/>
-      <button id="add-to-list">Increase temperature</button>
-    </div>
-    <footer>
-      <div id="content"> by <a href="http://codebar.io">codebar</a> </div>
-    </footer>
+      <h1 id="temperature"></h1>
+      <p>
+      <div><button id="increaseTemperature">Increase temperature</button></div>
+      <div><button id="decreaseTemperature">Decrease temperature</button></div>
+      <div><button id="resetTemperature">Reset temperature</button></div>
+      <div>power saving mode is <span id="power-saving-status">on</span></div>
+      <div><button id="powerModeOff">Turn power mode off</button></div>
+      <div><button id="powerModeOn">Turn power mode on</button></div>
+    </p>
+    <div id="red"></div>
   </body>
 </html>
-____________________
-<!-- <!DOCTYPE html>
-<html>
-
-<head>
-<script>
-function myFunction() {
-   document.getElementById("demo").innerHTML = "Paragraph changed.";
-}
-</script>
-</head>
-
-<body>
-
-<h1>My Web Page</h1>
-
-<p id="demo">A Paragraph</p>
-
-<button type="button" onclick="myFunction()">Try it</button>
-
-</body>
-</html>  -->

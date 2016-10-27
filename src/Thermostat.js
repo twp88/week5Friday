@@ -3,6 +3,7 @@ const MINIMUM_TEMPERATURE = 10;
 const POWER_ON_LIMIT = 25;
 const POWER_OFF_LIMIT = 32;
 
+// #this.DEFAULT_TEMPERATURE
 Thermostat = function(temperature = DEFAULT_TEMPERATURE) {
   this._powerOn = true;
   this._temperature = temperature;
@@ -29,8 +30,17 @@ Thermostat.prototype.decreaseTemperature = function () {
   };
 };
 
+
+Thermostat.prototype.returnTemperature = function () {
+  return this._temperature;
+}
+
 Thermostat.prototype.powerModeOff = function () {
   this._powerOn = false;
+}
+
+Thermostat.prototype.powerModeOn = function () {
+  this._powerOn = true;
 }
 
 Thermostat.prototype.resetTemperature = function () {
