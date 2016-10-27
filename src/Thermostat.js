@@ -48,6 +48,7 @@ Thermostat.prototype.powerModeOff = function () {
 
 Thermostat.prototype.powerModeOn = function () {
   this._powerOn = true;
+  this._temperature = DEFAULT_TEMPERATURE
 }
 
 Thermostat.prototype.resetTemperature = function () {

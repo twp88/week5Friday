@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   var thermostat = new Thermostat();
-  $('#temperature').text(thermostat.returnTemperature());
+  updateTemperature();
 
   $("#power-saving-status").text(thermostat.returnMode());
 
@@ -15,21 +15,27 @@ $(document).ready(function() {
     //console.log("Hello")
     thermostat.powerModeOn();
   $("#power-saving-status").text(thermostat.returnMode());
+  updateTemperature();
 });
 
   $("#increaseTemperature").click(function() {
     thermostat.increaseTemperature();
-    $('#temperature').text(thermostat.returnTemperature());
+    updateTemperature();
 });
 
   $("#decreaseTemperature").click(function() {
         thermostat.decreaseTemperature();
-        $('#temperature').text(thermostat.returnTemperature());
+        updateTemperature();
 });
 
   $("#resetTemperature").click(function() {
     thermostat.resetTemperature();
-    $('#temperature').text(thermostat.returnTemperature());
+    updateTemperature();
   });
+
+  function updateTemperature() {
+    $('#temperature').text(thermostat.returnTemperature());
+    $("#usage").text(thermostat.tellUsUsage());
+  };
 
 });
