@@ -5,6 +5,10 @@ h2 {
   box-sizing: border-box;
 }
 
+ {
+  color: orange;
+}
+
 #box {
   background-color: red;
   padding: 25px 50px 75px 500px;
@@ -20,14 +24,15 @@ h2 {
 h1 {
   font-size: 50px;
   font-style: normal;
+  color: silver;
 }
 
 h3 {
   font-size: 50px;
   font-style: normal;
+  color: silver;
 }
 
 body {
-  padding: 50px 100px 50px 30px;
-  background-color: lightblue;
+  background-image: url("http://i.imgur.com/9UGNi1z.jpg")
 }
