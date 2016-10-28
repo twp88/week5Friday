@@ -51,5 +51,9 @@ $(document).ready(function() {
       $('#box').css('background-color', 'red');
   }
   };
+  $.get("http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=8631f9bef6a8a7f76593520cac95bd07", function(apiData){
+    temperature = "The temperature in London right now is " + apiData.main.temp + " celsius"
 
+    $("#api_tag").append(temperature)
+  });
 });
