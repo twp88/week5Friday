@@ -56,4 +56,14 @@ $(document).ready(function() {
 
     $("#api_tag").append(temperature)
   });
+
+  $('#apiBox').submit(function(event) {
+    event.preventDefault();
+    var city = $("#city").val();
+    $.get("http://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&APPID=8631f9bef6a8a7f76593520cac95bd07", function(apiData){
+      temperature = "The temperature in "+city+" right now is " + apiData.main.temp + " celsius"
+      $("#api_tag").text(temperature)
+    });
+
+  });
 });
